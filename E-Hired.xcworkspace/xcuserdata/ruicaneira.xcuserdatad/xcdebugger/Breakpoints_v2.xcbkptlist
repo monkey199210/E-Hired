@@ -9,22 +9,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "E-Hired/ViewControllers/TodayJobsViewController.swift"
-            timestampString = "503521148.202741"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "160"
-            endingLineNumber = "160"
-            landmarkName = "getTodayDay()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "E-Hired/ViewControllers/YourResumeViewController.swift"
             timestampString = "503546434.881675"
             startingColumnNumber = "9223372036854775807"
@@ -185,13 +169,13 @@
                   symbolName = "E_Hired.YourProfileViewController.keyboardWillChangeFrame (__ObjC.NSNotification) -&gt; ()"
                   moduleName = "E-Hired"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ruicaneira/Documents/Development/working/E-Hired/E-Hired/E-Hired/ViewControllers/YourProfileViewController.swift"
-                  timestampString = "503554823.108691"
+                  urlString = "file:///Users/ruicaneira/Documents/Development/github/E-HiredVCS/E-Hired/ViewControllers/YourProfileViewController.swift"
+                  timestampString = "503577720.627382"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "398"
                   endingLineNumber = "398"
-                  offsetFromSymbolStart = "52">
+                  offsetFromSymbolStart = "19">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -200,13 +184,13 @@
                   symbolName = "E_Hired.YourProfileViewController.keyboardWillChangeFrame (__ObjC.NSNotification) -&gt; ()"
                   moduleName = "E-Hired"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ruicaneira/Documents/Development/working/E-Hired/E-Hired/E-Hired/ViewControllers/YourProfileViewController.swift"
-                  timestampString = "503554823.108821"
+                  urlString = "file:///Users/ruicaneira/Documents/Development/github/E-HiredVCS/E-Hired/ViewControllers/YourProfileViewController.swift"
+                  timestampString = "503577720.627498"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "398"
                   endingLineNumber = "398"
-                  offsetFromSymbolStart = "904">
+                  offsetFromSymbolStart = "949">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -256,6 +240,38 @@
             startingLineNumber = "230"
             endingLineNumber = "230"
             landmarkName = "getThumbnail(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "E-Hired/ViewControllers/TodayJobsViewController.swift"
+            timestampString = "503577576.122718"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "loadData()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "E-Hired/ViewControllers/TodayJobsViewController.swift"
+            timestampString = "503577613.607222"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "viewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

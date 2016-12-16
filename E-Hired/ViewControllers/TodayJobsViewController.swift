@@ -30,7 +30,10 @@ class TodayJobsViewController: UIViewController {
         super.viewDidLoad()
         self.initView()
         loadData()
-        timer = NSTimer.scheduledTimerWithTimeInterval(10, target: self, selector: #selector(TodayJobsViewController.loadData), userInfo: nil, repeats: true)
+        if timer == nil
+        {
+            timer = NSTimer.scheduledTimerWithTimeInterval(900, target: self, selector: #selector(TodayJobsViewController.loadData), userInfo: nil, repeats: true)
+        }
     }
     
     func initView()
@@ -167,6 +170,7 @@ class TodayJobsViewController: UIViewController {
 //        let userDefault = NSUserDefaults.standardUserDefaults()
 //        userDefault.setInteger(0, forKey: DATE_KEY)
 //        userDefault.synchronize()
+        timer.invalidate()
     }
 }
 extension TodayJobsViewController: UITableViewDataSource
