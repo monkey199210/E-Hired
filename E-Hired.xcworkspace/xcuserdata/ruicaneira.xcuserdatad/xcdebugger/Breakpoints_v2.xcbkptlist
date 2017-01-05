@@ -170,12 +170,12 @@
                   moduleName = "E-Hired"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ruicaneira/Documents/Development/github/E-HiredVCS/E-Hired/ViewControllers/YourProfileViewController.swift"
-                  timestampString = "505323946.928807"
+                  timestampString = "505332316.637778"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "403"
                   endingLineNumber = "403"
-                  offsetFromSymbolStart = "19">
+                  offsetFromSymbolStart = "52">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -185,12 +185,12 @@
                   moduleName = "E-Hired"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ruicaneira/Documents/Development/github/E-HiredVCS/E-Hired/ViewControllers/YourProfileViewController.swift"
-                  timestampString = "505323946.928943"
+                  timestampString = "505332316.638143"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "403"
                   endingLineNumber = "403"
-                  offsetFromSymbolStart = "949">
+                  offsetFromSymbolStart = "904">
                </Location>
             </Locations>
          </BreakpointContent>

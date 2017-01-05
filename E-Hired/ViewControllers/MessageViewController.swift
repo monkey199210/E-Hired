@@ -18,9 +18,6 @@ class MessageViewController: UIViewController {
     let YOUR_PROFILE_BTN = 2
     let YOUR_RESUME_BTN = 3
     
-    var reloadFlag = true
-    var messageCount = 10
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         GoogleAnalitics.send(GoogleAnalitics.MessageScreen.ScreenName)
@@ -30,8 +27,6 @@ class MessageViewController: UIViewController {
             buttons[i].layer.cornerRadius = 8
         }
         
-    }
-    override func viewDidAppear(animated: Bool) {
     }
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
@@ -83,9 +78,7 @@ class MessageViewController: UIViewController {
         default:
             break
         }
-        
     }
-    //
 }
 // MARK: -
 // MARK: UITableView Data Source
@@ -129,6 +122,9 @@ extension MessageViewController: UITableViewDelegate {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        let messageDetailVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("MessageDetailViewController") as! MessageDetailViewController
+        messageDetailVC.message = messageList[indexPath.row]
+        self.navigationController?.pushViewController(messageDetailVC, animated: true)
+        
     }
 }
-

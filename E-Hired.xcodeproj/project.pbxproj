@@ -32,6 +32,7 @@
 		F890A6441E1E7FAD0021B861 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F890A6431E1E7FAD0021B861 /* MessageCell.swift */; };
 		F890A6461E1E8FB40021B861 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F890A6451E1E8FB40021B861 /* MessageCell.xib */; };
 		F89B31C61E0303FE0038695A /* job.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F89B31C51E0303FE0038695A /* job.mp3 */; };
+		F89BE8761E1ECF6800B94CDA /* MessageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89BE8751E1ECF6800B94CDA /* MessageDetailViewController.swift */; };
 		F8B139EC1D91B3F8001B4ACD /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F8B139DB1D91B3F8001B4ACD /* LICENSE */; };
 		F8B139EE1D91B3F8001B4ACD /* ImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B139DE1D91B3F8001B4ACD /* ImageDataLoader.swift */; };
 		F8B139EF1D91B3F8001B4ACD /* ImageDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B139DF1D91B3F8001B4ACD /* ImageDecoder.swift */; };
@@ -90,6 +91,7 @@
 		F890A6431E1E7FAD0021B861 /* MessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageCell.swift; path = MessageCell/MessageCell.swift; sourceTree = "<group>"; };
 		F890A6451E1E8FB40021B861 /* MessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 		F89B31C51E0303FE0038695A /* job.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = job.mp3; sourceTree = "<group>"; };
+		F89BE8751E1ECF6800B94CDA /* MessageDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageDetailViewController.swift; sourceTree = "<group>"; };
 		F8B139DB1D91B3F8001B4ACD /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		F8B139DE1D91B3F8001B4ACD /* ImageDataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDataLoader.swift; sourceTree = "<group>"; };
 		F8B139DF1D91B3F8001B4ACD /* ImageDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDecoder.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 				F8876ECF1D92122000CB2E50 /* PickerViewController.swift */,
 				F873EF1B1DD0266C007510B8 /* LogInViewController.swift */,
 				F890A63E1E1E6FA70021B861 /* MessageViewController.swift */,
+				F89BE8751E1ECF6800B94CDA /* MessageDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -479,6 +482,7 @@
 				F84F74641D8F863A003BF0A9 /* SearchNewJobsViewController.swift in Sources */,
 				F84F74631D8F863A003BF0A9 /* MapTodaysJobsViewController.swift in Sources */,
 				F8876ED01D92122000CB2E50 /* PickerViewController.swift in Sources */,
+				F89BE8761E1ECF6800B94CDA /* MessageDetailViewController.swift in Sources */,
 				F8C662421D90BE1A006EA75D /* NetTypes.swift in Sources */,
 				F8C662411D90BE1A006EA75D /* Net.swift in Sources */,
 				F84F74561D8F6AEA003BF0A9 /* ViewController.swift in Sources */,

@@ -131,6 +131,19 @@ struct GoogleAnalitics {
         static let RESUMEBUTTON = "Today - Resume Button"
         
     }
+    struct MessageDetailScreen {
+        static let ScreenName = "Today Jobs Activity"
+        static let Category = "Action"
+        static let Action = "Click"
+        //label...
+        
+        static let MAINPAGEBUTTON = "Today - Main Button"
+        static let SEARCHBUTTON = "Today - Search Button"
+        static let MAPTODAYSJOBBUTTON = "Today - Map Today's Jobs Button"
+        static let PROFILEBUTTON = "Today - Profile Button"
+        static let RESUMEBUTTON = "Today - Resume Button"
+        
+    }
 
 
 }

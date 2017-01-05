@@ -5,7 +5,6 @@ PODS:
   - AsyncSwift (1.7.3)
   - BrightFutures (4.1.0):
     - Result (~> 2.0)
-  - DGElasticPullToRefresh (1.0.3)
   - FirebaseAnalytics (3.2.1):
     - FirebaseInstanceID (~> 1.0)
     - GoogleInterchangeUtilities (~> 1.2)
@@ -62,6 +61,7 @@ PODS:
     - MRProgress/Helper
   - Result (2.1.3)
   - Signals (2.3.0)
+  - StatefulTableView (0.0.15)
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
@@ -69,7 +69,6 @@ DEPENDENCIES:
   - AlamofireImage (~> 2.0)
   - AsyncSwift
   - BrightFutures
-  - DGElasticPullToRefresh
   - Genome (~> 1.0.0)
   - Google/Analytics
   - GoogleMaps
@@ -77,6 +76,7 @@ DEPENDENCIES:
   - HanekeSwift
   - MRProgress
   - Signals (~> 2.0)
+  - StatefulTableView (= 0.0.15)
   - SwiftyJSON
 
 SPEC CHECKSUMS:
@@ -84,7 +84,6 @@ SPEC CHECKSUMS:
   AlamofireImage: 3ccf3347d9ea24580dc11fb892770a0be6a29826
   AsyncSwift: f3ad5dd077bbd1477e7573e87071a532fedaca1a
   BrightFutures: e18b83fd6fa8562ceb9902ee609f0de23b0ee110
-  DGElasticPullToRefresh: 040f39ae69840b3261d163fe6735c5901bf851e9
   FirebaseAnalytics: 0fd6532cb2c3d03cd5cf26ad295ccb091efd3104
   FirebaseInstanceID: a9d923f3d0b6fbf9fac89310860357aaadc34be5
   Genome: 20d8aa7b63728553aab26fef53ea8570a71ce2f1
@@ -99,8 +98,9 @@ SPEC CHECKSUMS:
   MRProgress: 16de7cc9f347e8846797a770db102a323fe7ef09
   Result: 18e1a7597fbcca5923c565b40a25a98afafdee02
   Signals: d47128787e1675858f956556397e482fd667bd96
+  StatefulTableView: 46e674743c2c79aed549cd3d4b96c3387f966a3d
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
-PODFILE CHECKSUM: 0b69f0947e04f0c35083004e8a023df4f611a8ab
+PODFILE CHECKSUM: 53dc23f5ca334fd2da0abe392d39e3ab053b71bf
 
 COCOAPODS: 1.0.1
