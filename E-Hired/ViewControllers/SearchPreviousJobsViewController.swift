@@ -39,6 +39,7 @@ class SearchPreviousJobsViewController: UIViewController {
     @IBOutlet var buttons: [UIButton]!
     override func viewDidLoad() {
         super.viewDidLoad()
+        GoogleAnalitics.send(GoogleAnalitics.PreviousJobsScreen.ScreenName)
         self.initView()
         self.initData()
     }
@@ -163,12 +164,15 @@ class SearchPreviousJobsViewController: UIViewController {
 //            date = self.subDaysFromNow(-20)
             date = "19"
         case RESUME_BTN:
+            GoogleAnalitics.send(GoogleAnalitics.PreviousJobsScreen.ScreenName, category: GoogleAnalitics.PreviousJobsScreen.Category, action: GoogleAnalitics.PreviousJobsScreen.Action, label: GoogleAnalitics.PreviousJobsScreen.RESUMEBUTTON)
             let resumeVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("YourResumeViewController") as! YourResumeViewController
             self.navigationController?.pushViewController(resumeVC, animated: true)
         case PROFILE_BTN:
+            GoogleAnalitics.send(GoogleAnalitics.PreviousJobsScreen.ScreenName, category: GoogleAnalitics.PreviousJobsScreen.Category, action: GoogleAnalitics.PreviousJobsScreen.Action, label: GoogleAnalitics.PreviousJobsScreen.PROFILEBUTTON)
             let profileVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("YourProfileViewController") as! YourProfileViewController
             self.navigationController?.pushViewController(profileVC, animated: true)
         case MAIN_BTN:
+            GoogleAnalitics.send(GoogleAnalitics.PreviousJobsScreen.ScreenName, category: GoogleAnalitics.PreviousJobsScreen.Category, action: GoogleAnalitics.PreviousJobsScreen.Action, label: GoogleAnalitics.PreviousJobsScreen.MAINPAGEBUTTON)
             self.navigationController?.popToRootViewControllerAnimated(true)
         case TABLE_EXPEND_BTN:
             if tableExpendFlag && mapExpendFlag

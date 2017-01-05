@@ -53,6 +53,7 @@ class YourProfileViewController: UIViewController, UITextFieldDelegate, UINaviga
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        GoogleAnalitics.send(GoogleAnalitics.ProfileScreen.ScreenName)
         initView()
         initData()
     }
@@ -131,9 +132,11 @@ class YourProfileViewController: UIViewController, UITextFieldDelegate, UINaviga
         pickerVC.profileVC = self
         switch sender.tag {
         case EDIT_BTN:
+            GoogleAnalitics.send(GoogleAnalitics.ProfileScreen.ScreenName, category: GoogleAnalitics.ProfileScreen.Category, action: GoogleAnalitics.ProfileScreen.Action, label: GoogleAnalitics.ProfileScreen.EDITBUTTON)
             editAction()
             editFlag = true
         case SAVE_BTN:
+            GoogleAnalitics.send(GoogleAnalitics.ProfileScreen.ScreenName, category: GoogleAnalitics.ProfileScreen.Category, action: GoogleAnalitics.ProfileScreen.Action, label: GoogleAnalitics.ProfileScreen.SAVEBUTTON)
             if editFlag
             {
                 saveAction()
@@ -293,10 +296,12 @@ class YourProfileViewController: UIViewController, UITextFieldDelegate, UINaviga
         
         let fbAction = UIAlertAction(title: "Facebook", style: .Default) { (action) in
             // ...
+            GoogleAnalitics.send(GoogleAnalitics.ProfileScreen.ScreenName, category: GoogleAnalitics.ProfileScreen.Category, action: GoogleAnalitics.ProfileScreen.Action, label: GoogleAnalitics.ProfileScreen.FACEBOOKSHAREBUTTON)
             self.connectFaceBook()
         }
         
         let twAction = UIAlertAction(title: "Twitter", style: .Default) { (action) in
+            GoogleAnalitics.send(GoogleAnalitics.ProfileScreen.ScreenName, category: GoogleAnalitics.ProfileScreen.Category, action: GoogleAnalitics.ProfileScreen.Action, label: GoogleAnalitics.ProfileScreen.TWITTERSHAREBUTTON)
             self.connnectTwitter()
         }
 //        let instagramAction = UIAlertAction(title: "Instagram", style: .Default) { (action) in

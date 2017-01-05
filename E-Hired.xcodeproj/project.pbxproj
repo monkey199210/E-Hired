@@ -26,6 +26,11 @@
 		F873EF1C1DD0266C007510B8 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F873EF1B1DD0266C007510B8 /* LogInViewController.swift */; };
 		F8876ED01D92122000CB2E50 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8876ECF1D92122000CB2E50 /* PickerViewController.swift */; };
 		F8887E881E02C04100F134FF /* InstagramManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8887E871E02C04100F134FF /* InstagramManager.swift */; };
+		F890A63A1E1DF8D70021B861 /* GoogleAnaliticConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = F890A6391E1DF8D70021B861 /* GoogleAnaliticConst.swift */; };
+		F890A63D1E1DFF570021B861 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F890A63C1E1DFF570021B861 /* GoogleService-Info.plist */; };
+		F890A63F1E1E6FA70021B861 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F890A63E1E1E6FA70021B861 /* MessageViewController.swift */; };
+		F890A6441E1E7FAD0021B861 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F890A6431E1E7FAD0021B861 /* MessageCell.swift */; };
+		F890A6461E1E8FB40021B861 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F890A6451E1E8FB40021B861 /* MessageCell.xib */; };
 		F89B31C61E0303FE0038695A /* job.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F89B31C51E0303FE0038695A /* job.mp3 */; };
 		F8B139EC1D91B3F8001B4ACD /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F8B139DB1D91B3F8001B4ACD /* LICENSE */; };
 		F8B139EE1D91B3F8001B4ACD /* ImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B139DE1D91B3F8001B4ACD /* ImageDataLoader.swift */; };
@@ -78,6 +83,12 @@
 		F873EF1B1DD0266C007510B8 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		F8876ECF1D92122000CB2E50 /* PickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		F8887E871E02C04100F134FF /* InstagramManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InstagramManager.swift; path = Social/InstagramManager.swift; sourceTree = "<group>"; };
+		F890A6391E1DF8D70021B861 /* GoogleAnaliticConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleAnaliticConst.swift; sourceTree = "<group>"; };
+		F890A63B1E1DFA4C0021B861 /* E-Hired-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "E-Hired-Bridging-Header.h"; sourceTree = "<group>"; };
+		F890A63C1E1DFF570021B861 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		F890A63E1E1E6FA70021B861 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		F890A6431E1E7FAD0021B861 /* MessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageCell.swift; path = MessageCell/MessageCell.swift; sourceTree = "<group>"; };
+		F890A6451E1E8FB40021B861 /* MessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 		F89B31C51E0303FE0038695A /* job.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = job.mp3; sourceTree = "<group>"; };
 		F8B139DB1D91B3F8001B4ACD /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		F8B139DE1D91B3F8001B4ACD /* ImageDataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDataLoader.swift; sourceTree = "<group>"; };
@@ -140,7 +151,6 @@
 			isa = PBXGroup;
 			children = (
 				F84F74411D8F65D6003BF0A9 /* E-Hired */,
-				F8C6623B1D90BD7A006EA75D /* Network */,
 				F84F74401D8F65D6003BF0A9 /* Products */,
 				5C10749393C2C0B87A51B019 /* Pods */,
 				8DD3C7397919009B3E4280F3 /* Frameworks */,
@@ -158,11 +168,9 @@
 		F84F74411D8F65D6003BF0A9 /* E-Hired */ = {
 			isa = PBXGroup;
 			children = (
-				F8887E861E02C02100F134FF /* Social */,
-				F84F74421D8F65D6003BF0A9 /* AppDelegate.swift */,
-				F8C662471D90BF33006EA75D /* HelpFile.swift */,
-				F84F74461D8F65D7003BF0A9 /* Main.storyboard */,
 				F84F74491D8F65D7003BF0A9 /* Assets.xcassets */,
+				F8887E861E02C02100F134FF /* Social */,
+				F8C6623B1D90BD7A006EA75D /* Network */,
 				F89B31C41E0303FE0038695A /* Resource */,
 				F8C6624B1D90E2AC006EA75D /* Cells */,
 				F8C662441D90BEF1006EA75D /* Events */,
@@ -170,8 +178,14 @@
 				F8C662381D90B900006EA75D /* CustomViews */,
 				F8C662511D90EBB0006EA75D /* Protocols */,
 				F84F74541D8F6AEA003BF0A9 /* ViewControllers */,
+				F84F74421D8F65D6003BF0A9 /* AppDelegate.swift */,
+				F8C662471D90BF33006EA75D /* HelpFile.swift */,
+				F890A6391E1DF8D70021B861 /* GoogleAnaliticConst.swift */,
+				F84F74461D8F65D7003BF0A9 /* Main.storyboard */,
 				F84F744B1D8F65D7003BF0A9 /* LaunchScreen.storyboard */,
 				F84F744E1D8F65D7003BF0A9 /* Info.plist */,
+				F890A63C1E1DFF570021B861 /* GoogleService-Info.plist */,
+				F890A63B1E1DFA4C0021B861 /* E-Hired-Bridging-Header.h */,
 			);
 			path = "E-Hired";
 			sourceTree = "<group>";
@@ -189,6 +203,7 @@
 				F84F74621D8F863A003BF0A9 /* YourResumeViewController.swift */,
 				F8876ECF1D92122000CB2E50 /* PickerViewController.swift */,
 				F873EF1B1DD0266C007510B8 /* LogInViewController.swift */,
+				F890A63E1E1E6FA70021B861 /* MessageViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -207,6 +222,15 @@
 				F8887E871E02C04100F134FF /* InstagramManager.swift */,
 			);
 			name = Social;
+			sourceTree = "<group>";
+		};
+		F890A6401E1E7DEA0021B861 /* MessageCell */ = {
+			isa = PBXGroup;
+			children = (
+				F890A6431E1E7FAD0021B861 /* MessageCell.swift */,
+				F890A6451E1E8FB40021B861 /* MessageCell.xib */,
+			);
+			name = MessageCell;
 			sourceTree = "<group>";
 		};
 		F89B31C41E0303FE0038695A /* Resource */ = {
@@ -266,8 +290,7 @@
 				F8C6623E1D90BE1A006EA75D /* NetTypes.swift */,
 				F8C6623F1D90BE1A006EA75D /* Webservices.swift */,
 			);
-			name = Network;
-			path = "E-Hired/Network";
+			path = Network;
 			sourceTree = "<group>";
 		};
 		F8C662441D90BEF1006EA75D /* Events */ = {
@@ -281,6 +304,7 @@
 		F8C6624B1D90E2AC006EA75D /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				F890A6401E1E7DEA0021B861 /* MessageCell */,
 				F8C6624C1D90E2AC006EA75D /* JobCell */,
 			);
 			path = Cells;
@@ -366,8 +390,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8B139EC1D91B3F8001B4ACD /* LICENSE in Resources */,
+				F890A63D1E1DFF570021B861 /* GoogleService-Info.plist in Resources */,
 				F89B31C61E0303FE0038695A /* job.mp3 in Resources */,
 				F8C662501D90E2DD006EA75D /* JobCell.xib in Resources */,
+				F890A6461E1E8FB40021B861 /* MessageCell.xib in Resources */,
 				F84F744D1D8F65D7003BF0A9 /* LaunchScreen.storyboard in Resources */,
 				F84F744A1D8F65D7003BF0A9 /* Assets.xcassets in Resources */,
 				F84F74481D8F65D7003BF0A9 /* Main.storyboard in Resources */,
@@ -431,6 +457,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F80E594F1DD15182009963C2 /* RoundButton.swift in Sources */,
+				F890A6441E1E7FAD0021B861 /* MessageCell.swift in Sources */,
+				F890A63F1E1E6FA70021B861 /* MessageViewController.swift in Sources */,
 				F8C662431D90BE1A006EA75D /* Webservices.swift in Sources */,
 				F8B139F71D91B3F8001B4ACD /* ImageRequestKey.swift in Sources */,
 				F8B139F81D91B3F8001B4ACD /* ImageResponse.swift in Sources */,
@@ -459,6 +487,7 @@
 				F8B139F41D91B3F8001B4ACD /* ImageMemoryCache.swift in Sources */,
 				F8B139F11D91B3F8001B4ACD /* ImageLoader.swift in Sources */,
 				F8B139EF1D91B3F8001B4ACD /* ImageDecoder.swift in Sources */,
+				F890A63A1E1DF8D70021B861 /* GoogleAnaliticConst.swift in Sources */,
 				F8C6624E1D90E2C5006EA75D /* JobCell.swift in Sources */,
 				F8C6623A1D90B900006EA75D /* activityIndicator.swift in Sources */,
 				F8B139EE1D91B3F8001B4ACD /* ImageDataLoader.swift in Sources */,
@@ -582,14 +611,15 @@
 			baseConfigurationReference = 2662354F8C2FA7774578EA4A /* Pods-E-Hired.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: E-hired (T9JPUPL894)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: E-hired (T9JPUPL894)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "E-Hired/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.e-hired";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "155c54ff-10d5-4b1a-a5e0-46a7ee1aad61";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "E-Hired/E-Hired-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -599,14 +629,15 @@
 			baseConfigurationReference = 1C29F2DACF1057E74D4F3151 /* Pods-E-Hired.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: E-hired (T9JPUPL894)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: E-hired (T9JPUPL894)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "E-Hired/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.e-hired";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "155c54ff-10d5-4b1a-a5e0-46a7ee1aad61";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "E-Hired/E-Hired-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

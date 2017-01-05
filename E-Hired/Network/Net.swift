@@ -92,6 +92,19 @@ class Net {
         }
         return promise.future
     }
+    class func getMessages(params: [String: AnyObject]) -> Future<EHMessage, NSError> {
+        let promise = Promise<EHMessage, NSError>()
+        let urlString = getRealUrl(EHNet.GET_MESSAGE)
+        //        Webservice.cancelRequestForKey(kMeRequestKey)
+        Webservice.request(urlString, params: params, animated: true).onSuccess { (result: WebResult<EHMessage>) -> Void in
+            promise.success(result.value!)
+            }.onFailure { (error) -> Void in
+                print("Error: \(error)")
+                promise.failure(error)
+        }
+        return promise.future
+    }
+
     class func getAPI_Key(email: String!, password: String!) -> Future<EHAPIKey, NSError> {
         let promise = Promise<EHAPIKey, NSError>()
         var urlString = EHNet.BASE_URL + EHNet.GET_APIKEY

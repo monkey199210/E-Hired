@@ -13,4 +13,6 @@ pod 'SwiftyJSON'
 pod 'Signals', '~> 2.0'
 pod 'HanekeSwift'
 pod 'AsyncSwift'
+pod 'Google/Analytics'
+pod 'DGElasticPullToRefresh'
 end

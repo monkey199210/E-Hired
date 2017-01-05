@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="AvenirNextLTPro-MediumCn.otf">
+            <string>AvenirNextLTPro-MediumCn</string>
+            <string>AvenirNextLTPro-MediumCn</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MessageCell" id="aEG-x8-SS5" customClass="MessageCell" customModule="E_Hired" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aEG-x8-SS5" id="KgF-OV-SH3">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="messageunread" translatesAutoresizingMaskIntoConstraints="NO" id="7UJ-9I-5aU">
+                        <rect key="frame" x="28" y="12" width="29" height="19"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="7UJ-9I-5aU" secondAttribute="height" multiplier="48:31" id="Mv7-fe-DLt"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJT-e2-uLn">
+                        <rect key="frame" x="77" y="14" width="49" height="15"/>
+                        <fontDescription key="fontDescription" name="AvenirNextLTPro-MediumCn" family="Avenir Next LT Pro" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jan 03" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rx5-ru-G5N">
+                        <rect key="frame" x="329" y="14" width="37" height="15"/>
+                        <fontDescription key="fontDescription" name="AvenirNextLTPro-MediumCn" family="Avenir Next LT Pro" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="WJT-e2-uLn" firstAttribute="leading" secondItem="7UJ-9I-5aU" secondAttribute="trailing" constant="20" id="1hW-cV-94H"/>
+                    <constraint firstItem="7UJ-9I-5aU" firstAttribute="top" secondItem="KgF-OV-SH3" secondAttribute="topMargin" constant="4" id="9uD-ZP-SrQ"/>
+                    <constraint firstItem="WJT-e2-uLn" firstAttribute="centerY" secondItem="7UJ-9I-5aU" secondAttribute="centerY" id="FJb-KC-4jJ"/>
+                    <constraint firstItem="7UJ-9I-5aU" firstAttribute="leading" secondItem="KgF-OV-SH3" secondAttribute="leadingMargin" constant="20" id="H8D-Rl-Pf7"/>
+                    <constraint firstItem="rx5-ru-G5N" firstAttribute="centerY" secondItem="7UJ-9I-5aU" secondAttribute="centerY" id="fcE-52-KxN"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="7UJ-9I-5aU" secondAttribute="bottom" constant="4" id="uRE-Mu-LzW"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="rx5-ru-G5N" secondAttribute="trailing" constant="40" id="vjD-OV-B7E"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="dateLabel" destination="rx5-ru-G5N" id="6OP-uE-EC4"/>
+                <outlet property="msgImg" destination="7UJ-9I-5aU" id="vdR-vF-xR0"/>
+                <outlet property="msgLabel" destination="WJT-e2-uLn" id="IbG-OO-b8V"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="messageunread" width="24" height="15"/>
+    </resources>
+</document>

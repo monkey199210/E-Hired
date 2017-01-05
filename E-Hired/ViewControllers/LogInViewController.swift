@@ -17,7 +17,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var pwdText: UITextField!
     var showKeyboard = false
     override func viewDidLoad() {
-        
+        GoogleAnalitics.send(GoogleAnalitics.Login.ScreenName)
         let tapGesture = UITapGestureRecognizer.init(target: self, action: #selector(LogInViewController.handleTap))
         self.scrollView.addGestureRecognizer(tapGesture);
         logInBtn.layer.cornerRadius = 8

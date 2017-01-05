@@ -16,6 +16,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         loadingView.startLoading()
         // Do any additional setup after loading the view, typically from a nib.
+        GoogleAnalitics.send(GoogleAnalitics.Splash.ScreenName)
         NSTimer.scheduledTimerWithTimeInterval(3.0, target: self, selector: #selector(ViewController.gotoMainViewController), userInfo: nil, repeats: false)
     }
     

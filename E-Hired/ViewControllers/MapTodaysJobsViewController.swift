@@ -35,6 +35,7 @@ class MapTodaysJobsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        GoogleAnalitics.send(GoogleAnalitics.MapTodayJobScreen.ScreenName)
         initView()
         initData()
     }
@@ -122,9 +123,11 @@ class MapTodaysJobsViewController: UIViewController {
         switch sender.tag {
             
         case TODAY_JOB_BTN:
+            GoogleAnalitics.send(GoogleAnalitics.MapTodayJobScreen.ScreenName, category: GoogleAnalitics.MapTodayJobScreen.Category, action: GoogleAnalitics.MapTodayJobScreen.Action, label: GoogleAnalitics.MapTodayJobScreen.TODAYJOBBUTTON)
             let todayJobVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("TodayJobsViewController") as! TodayJobsViewController
             self.navigationController?.pushViewController(todayJobVC, animated: true)
         case MAIN_PAGE_BTN:
+            GoogleAnalitics.send(GoogleAnalitics.MapTodayJobScreen.ScreenName, category: GoogleAnalitics.MapTodayJobScreen.Category, action: GoogleAnalitics.MapTodayJobScreen.Action, label: GoogleAnalitics.MapTodayJobScreen.MAINPAGEBUTTON)
             self.navigationController?.popToRootViewControllerAnimated(true)
         case TABLE_EXPEND_BTN:
             if tableExpendFlag && mapExpendFlag

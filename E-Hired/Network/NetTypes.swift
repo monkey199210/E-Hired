@@ -144,6 +144,9 @@ struct EHMessage : BasicMappable {
         private(set) var message_priority: String?
         private(set) var message_sent: String?
         private(set) var message_icon: String = ""
+        private(set) var message_opened: String = ""
+        private(set) var message_date: String = ""
+        
         mutating func sequence(map: Map) throws {
             try message_id <~ map["message_id"]
             try message_from <~ map["message_from"]
@@ -152,9 +155,11 @@ struct EHMessage : BasicMappable {
             try message_priority <~ map["message_priority"]
             try message_sent <~ map["message_sent"]
             try message_icon <~ map["message_icon"]
+            try message_opened <~ map["message_opened"]
+            try message_date <~ map["message_date"]
         }
     }
-    private(set) var detail: Detail!
+    private(set) var detail: [Detail]!
     private(set) var status: String!
     private(set) var error: String!
     

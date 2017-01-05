@@ -25,6 +25,7 @@ class YourResumeViewController: UIViewController {
     var shareText = ""
     override func viewDidLoad() {
         super.viewDidLoad()
+        GoogleAnalitics.send(GoogleAnalitics.ResumeScreen.ScreenName)
         self.initView()
         self.initData()
     }
@@ -90,15 +91,20 @@ class YourResumeViewController: UIViewController {
     @IBAction func action(sender: UIButton) {
         switch sender.tag {
         case SHARE_BTN:
+            GoogleAnalitics.send(GoogleAnalitics.ResumeScreen.ScreenName, category: GoogleAnalitics.ResumeScreen.Category, action: GoogleAnalitics.ResumeScreen.Action, label: GoogleAnalitics.ResumeScreen.SHAREBUTTON)
             shareAction()
         case SAVE_BTN:
+            GoogleAnalitics.send(GoogleAnalitics.ResumeScreen.ScreenName, category: GoogleAnalitics.ResumeScreen.Category, action: GoogleAnalitics.ResumeScreen.Action, label: GoogleAnalitics.ResumeScreen.SAVEBUTTON)
             saveAction()
         case MAIN_BTN:
+            GoogleAnalitics.send(GoogleAnalitics.ResumeScreen.ScreenName, category: GoogleAnalitics.ResumeScreen.Category, action: GoogleAnalitics.ResumeScreen.Action, label: GoogleAnalitics.ResumeScreen.MAINPAGEBUTTON)
             self.navigationController?.popToRootViewControllerAnimated(true)
         case JOBS_BTN:
+             GoogleAnalitics.send(GoogleAnalitics.ResumeScreen.ScreenName, category: GoogleAnalitics.ResumeScreen.Category, action: GoogleAnalitics.ResumeScreen.Action, label: GoogleAnalitics.ResumeScreen.TODAYJOBBUTTON)
             let todayJobVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("TodayJobsViewController") as! TodayJobsViewController
             self.navigationController?.pushViewController(todayJobVC, animated: true)
         case MAP_BTN:
+             GoogleAnalitics.send(GoogleAnalitics.ResumeScreen.ScreenName, category: GoogleAnalitics.ResumeScreen.Category, action: GoogleAnalitics.ResumeScreen.Action, label: GoogleAnalitics.ResumeScreen.MAPTODAYSJOBBUTTON)
             let mapVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("MapTodaysJobsViewController") as! MapTodaysJobsViewController
             self.navigationController?.pushViewController(mapVC, animated: true)
         case LIST_BTN:

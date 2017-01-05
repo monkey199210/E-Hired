@@ -28,6 +28,8 @@ class TodayJobsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        GoogleAnalitics.send(GoogleAnalitics.TodayJobsScreen.ScreenName)
+        
         self.initView()
         loadData()
         if timer == nil
@@ -87,11 +89,14 @@ class TodayJobsViewController: UIViewController {
     @IBAction func action(sender: UIButton) {
         switch sender.tag {
         case MAIN_PAGE_BTN:
+            GoogleAnalitics.send(GoogleAnalitics.TodayJobsScreen.ScreenName, category: GoogleAnalitics.TodayJobsScreen.Category, action: GoogleAnalitics.TodayJobsScreen.Action, label: GoogleAnalitics.TodayJobsScreen.MAINPAGEBUTTON)
             self.navigationController?.popToRootViewControllerAnimated(true)
         case YOUR_PROFILE_BTN:
+            GoogleAnalitics.send(GoogleAnalitics.TodayJobsScreen.ScreenName, category: GoogleAnalitics.TodayJobsScreen.Category, action: GoogleAnalitics.TodayJobsScreen.Action, label: GoogleAnalitics.TodayJobsScreen.PROFILEBUTTON)
             let profileVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("YourProfileViewController") as! YourProfileViewController
             self.navigationController?.pushViewController(profileVC, animated: true)
         case YOUR_RESUME_BTN:
+            GoogleAnalitics.send(GoogleAnalitics.TodayJobsScreen.ScreenName, category: GoogleAnalitics.TodayJobsScreen.Category, action: GoogleAnalitics.TodayJobsScreen.Action, label: GoogleAnalitics.TodayJobsScreen.RESUMEBUTTON)
             let resumeVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("YourResumeViewController") as! YourResumeViewController
             self.navigationController?.pushViewController(resumeVC, animated: true)
         default:

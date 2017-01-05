@@ -22,6 +22,7 @@ struct EHNet {
     static let  GET_JOBS = "action=get_jobs"
     static let  GET_APIKEY = "action=get_api_key"
     static let GET_PROFILE = "action=get_profile"
+    static let GET_MESSAGE = "action=get_messages"
     
     static let UPDATE_PROFILE_URL = "action=update_profile"
     static let UPDATE_PROFILE_PRICTURE_URL = "action=update_profile_picture"

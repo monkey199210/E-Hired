@@ -24,6 +24,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>DGElasticPullToRefresh.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Genome.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -67,12 +72,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1220B768B98977AE8324AFD2251E423D</key>
+		<key>08E8715E96DDC0F8C8B87782CE37DFCE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1879E8CABA207CDB210985E2B9719D43</key>
+		<key>115824B7CB2E76E5ACB836A251E79404</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -88,6 +93,11 @@
 			<true/>
 		</dict>
 		<key>7BB17359068A26BB1EF61653A3E7C9A3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8587193B5E270423FBDE78D07E36B2FC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -112,7 +122,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E8CCC4B2D42BB49B4CBF28E424432C85</key>
+		<key>E44165EE2586FB4B4B50F0E3D7D52E87</key>
 		<dict>
 			<key>primary</key>
 			<true/>

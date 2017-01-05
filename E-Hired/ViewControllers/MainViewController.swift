@@ -17,9 +17,11 @@ class MainViewController: UIViewController {
     let MAP_TODAYS_JOBS_BTN = 4
     let YOUR_RESUME_BTN = 5
     let SEARCH_PREVIOUS_JOBS_BTN = 6
+    let Message_Btn = 7
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        GoogleAnalitics.send(GoogleAnalitics.MainScreen.ScreenName)
        self.initView()
     }
     func initView()
@@ -43,18 +45,25 @@ class MainViewController: UIViewController {
         
         switch sender.tag {
         case TODAY_JOBS_LISTVIEW_BTN:
-            break
-        case TODAY_JOBS_LISTVIEW_BTN:
+            GoogleAnalitics.send(GoogleAnalitics.MainScreen.ScreenName, category: GoogleAnalitics.MainScreen.Category, action: GoogleAnalitics.MainScreen.Action, label: GoogleAnalitics.MainScreen.TODAYJOBBUTTON)
             break
         case YOUR_PROFILE_BTN:
+            GoogleAnalitics.send(GoogleAnalitics.MainScreen.ScreenName, category: GoogleAnalitics.MainScreen.Category, action: GoogleAnalitics.MainScreen.Action, label: GoogleAnalitics.MainScreen.PROFILEBUTTON)
             break
         case SEARCH_NEW_JOBS_BTN:
+            GoogleAnalitics.send(GoogleAnalitics.MainScreen.ScreenName, category: GoogleAnalitics.MainScreen.Category, action: GoogleAnalitics.MainScreen.Action, label: GoogleAnalitics.MainScreen.SEARCHNEWJOBSBUTTON)
             break
         case MAP_TODAYS_JOBS_BTN:
+            GoogleAnalitics.send(GoogleAnalitics.MainScreen.ScreenName, category: GoogleAnalitics.MainScreen.Category, action: GoogleAnalitics.MainScreen.Action, label: GoogleAnalitics.MainScreen.MAPTODAYSJOBBUTTON)
             break
         case YOUR_RESUME_BTN:
+            GoogleAnalitics.send(GoogleAnalitics.MainScreen.ScreenName, category: GoogleAnalitics.MainScreen.Category, action: GoogleAnalitics.MainScreen.Action, label: GoogleAnalitics.MainScreen.RESUMEBUTTON)
             break
         case SEARCH_PREVIOUS_JOBS_BTN:
+            GoogleAnalitics.send(GoogleAnalitics.MainScreen.ScreenName, category: GoogleAnalitics.MainScreen.Category, action: GoogleAnalitics.MainScreen.Action, label: GoogleAnalitics.MainScreen.SEARCHPREVIOUSJOBSBUTTON)
+            break
+        case Message_Btn:
+            GoogleAnalitics.send(GoogleAnalitics.MainScreen.ScreenName, category: GoogleAnalitics.MainScreen.Category, action: GoogleAnalitics.MainScreen.Action, label: GoogleAnalitics.MainScreen.MESSAGESBUTTON)
             break
         default:
             break
@@ -62,6 +71,7 @@ class MainViewController: UIViewController {
         
     }
     func logOut(){
+        GoogleAnalitics.send(GoogleAnalitics.MainScreen.ScreenName, category: GoogleAnalitics.MainScreen.Category, action: GoogleAnalitics.MainScreen.Action, label: GoogleAnalitics.MainScreen.LOGOUTBUTTON)
         let userDefault = NSUserDefaults.standardUserDefaults()
         userDefault.setObject("", forKey: "apikey")
         userDefault.synchronize()
