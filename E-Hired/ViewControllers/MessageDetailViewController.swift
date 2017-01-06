@@ -7,43 +7,25 @@
 //
 
 import UIKit
-
-
-
 class MessageDetailViewController: UIViewController {
     
-    
-    
     var message: EHMessage.Detail!
-    
     @IBOutlet var buttons: [UIButton]!
-    
     @IBOutlet weak var subjectLabel: UILabel!
-    
     @IBOutlet weak var fromLabel: UILabel!
-    
     @IBOutlet weak var sentLabel: UILabel!
-    
     @IBOutlet weak var messageTV: UITextView!
-    
     @IBOutlet weak var replyMsgTV: UITextView!
     @IBOutlet weak var loadingView: activityIndicator!
-    
-    
     
     @IBOutlet weak var replyView: UIView!
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
+        GoogleAnalitics.send(GoogleAnalitics.MessageDetailScreen.ScreenName)
         initView()
-        
-        
     }
-    
-    
-    
     override func didReceiveMemoryWarning() {
         
         super.didReceiveMemoryWarning()
@@ -69,7 +51,6 @@ class MessageDetailViewController: UIViewController {
         if let message = self.message
             
         {
-            
             messageTV.text = message.message_body
             
             subjectLabel.text = message.message_subject
@@ -77,8 +58,6 @@ class MessageDetailViewController: UIViewController {
             fromLabel.text = message.message_from
             
             sentLabel.text = message.message_date
-            
-            
             
             let params = ["message_id": message.message_id as AnyObject]
             

@@ -70,7 +70,6 @@ class TodayJobsViewController: UIViewController {
                 if self.jobs.count == 0 {
                     
                 }else{
-                    self.playSound()
                     self.requestJobViewed()
                     self.saveDate()
                 }
@@ -176,6 +175,7 @@ class TodayJobsViewController: UIViewController {
 //        userDefault.setInteger(0, forKey: DATE_KEY)
 //        userDefault.synchronize()
         timer.invalidate()
+        timer = nil
     }
 }
 extension TodayJobsViewController: UITableViewDataSource

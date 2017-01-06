@@ -61,8 +61,8 @@ PODS:
     - MRProgress/Helper
   - Result (2.1.3)
   - Signals (2.3.0)
-  - StatefulTableView (0.0.15)
   - SwiftyJSON (2.3.2)
+  - UILoadControl (2.0.0)
 
 DEPENDENCIES:
   - Alamofire (~> 3.4)
@@ -76,8 +76,8 @@ DEPENDENCIES:
   - HanekeSwift
   - MRProgress
   - Signals (~> 2.0)
-  - StatefulTableView (= 0.0.15)
   - SwiftyJSON
+  - UILoadControl
 
 SPEC CHECKSUMS:
   Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
@@ -98,9 +98,9 @@ SPEC CHECKSUMS:
   MRProgress: 16de7cc9f347e8846797a770db102a323fe7ef09
   Result: 18e1a7597fbcca5923c565b40a25a98afafdee02
   Signals: d47128787e1675858f956556397e482fd667bd96
-  StatefulTableView: 46e674743c2c79aed549cd3d4b96c3387f966a3d
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+  UILoadControl: 6a21eac2da398f3f5958aba9c1c04a65480f37d5
 
-PODFILE CHECKSUM: 53dc23f5ca334fd2da0abe392d39e3ab053b71bf
+PODFILE CHECKSUM: 072a89e58f0737904c83270ba731958560d449a8
 
 COCOAPODS: 1.0.1

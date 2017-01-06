@@ -132,7 +132,7 @@ struct GoogleAnalitics {
         
     }
     struct MessageDetailScreen {
-        static let ScreenName = "Today Jobs Activity"
+        static let ScreenName = "Detail Activity"
         static let Category = "Action"
         static let Action = "Click"
         //label...

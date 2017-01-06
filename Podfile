@@ -14,5 +14,5 @@ pod 'Signals', '~> 2.0'
 pod 'HanekeSwift'
 pod 'AsyncSwift'
 pod 'Google/Analytics'
-pod 'StatefulTableView', '0.0.15'
+pod "UILoadControl"
 end

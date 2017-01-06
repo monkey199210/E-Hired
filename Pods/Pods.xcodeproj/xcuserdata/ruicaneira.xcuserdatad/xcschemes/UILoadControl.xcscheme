@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '9CF1E818131B02569276C74A915F9EC8'
-               BlueprintName = 'StatefulTableView'
+               BlueprintIdentifier = 'D530751FF71DE9F188A3F863E4614AEE'
+               BlueprintName = 'UILoadControl'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'StatefulTableView.framework'>
+               BuildableName = 'UILoadControl.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

@@ -54,12 +54,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>StatefulTableView.xcscheme</key>
+		<key>SwiftyJSON.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>SwiftyJSON.xcscheme</key>
+		<key>UILoadControl.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -67,27 +67,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>035EE00C39C68477D0D880FCD2CCE917</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>05094CC4A047119F7ADC14EE74C4881C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1A506638EFA93570F1E18B7EB2379E5D</key>
+		<key>0AC9B591C63C2BEB3DBB9F5FFE985337</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>2C2B1953A91633859BF7AD238FF567A0</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>33298E528F98DA22FEA45D644B49229F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -107,7 +97,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9CF1E818131B02569276C74A915F9EC8</key>
+		<key>A7E473835948EA5E9E5A089F247E5BC6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A9DA26212A839F7A4B3A71709EFC1997</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -118,6 +113,11 @@
 			<true/>
 		</dict>
 		<key>D1DC35DB2C695031A72543555FB23729</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D530751FF71DE9F188A3F863E4614AEE</key>
 		<dict>
 			<key>primary</key>
 			<true/>

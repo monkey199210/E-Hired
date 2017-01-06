@@ -35,7 +35,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jan 03" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rx5-ru-G5N">
-                        <rect key="frame" x="329" y="14" width="37" height="15"/>
+                        <rect key="frame" x="349" y="14" width="37" height="15"/>
                         <fontDescription key="fontDescription" name="AvenirNextLTPro-MediumCn" family="Avenir Next LT Pro" pointSize="15"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -49,7 +49,7 @@
                     <constraint firstItem="7UJ-9I-5aU" firstAttribute="leading" secondItem="KgF-OV-SH3" secondAttribute="leadingMargin" constant="20" id="H8D-Rl-Pf7"/>
                     <constraint firstItem="rx5-ru-G5N" firstAttribute="centerY" secondItem="7UJ-9I-5aU" secondAttribute="centerY" id="fcE-52-KxN"/>
                     <constraint firstAttribute="bottomMargin" secondItem="7UJ-9I-5aU" secondAttribute="bottom" constant="4" id="uRE-Mu-LzW"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="rx5-ru-G5N" secondAttribute="trailing" constant="40" id="vjD-OV-B7E"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="rx5-ru-G5N" secondAttribute="trailing" constant="20" id="vjD-OV-B7E"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

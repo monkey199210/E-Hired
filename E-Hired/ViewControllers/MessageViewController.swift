@@ -7,36 +7,48 @@
 //
 
 import UIKit
+import UILoadControl
 
-class MessageViewController: UIViewController {
+class MessageViewController: UIViewController, UIScrollViewDelegate {
     var messageList: [EHMessage.Detail] = []
     @IBOutlet var buttons: [UIButton]!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var loadingView: activityIndicator!
     
+    var cellHeight:CGFloat = 0
     let MAIN_PAGE_BTN = 1
     let YOUR_PROFILE_BTN = 2
     let YOUR_RESUME_BTN = 3
     
+    var msgCount = 10
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         GoogleAnalitics.send(GoogleAnalitics.MessageScreen.ScreenName)
-        tableView.registerNib(MessageCell.cellNib, forCellReuseIdentifier: MessageCell.id)
-        for i in 0 ..< buttons.count
-        {
-            buttons[i].layer.cornerRadius = 8
-        }
-        
+        initView()
     }
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true)
         loadMessages()
     }
+
+    func initView()
+    {
+        tableView.registerNib(MessageCell.cellNib, forCellReuseIdentifier: MessageCell.id)
+        for i in 0 ..< buttons.count
+        {
+            buttons[i].layer.cornerRadius = 8
+        }
+
+        tableView.loadControl = UILoadControl(target: self, action: #selector(MessageViewController.loadMoreData))
+        tableView.loadControl?.heightLimit = 100.0 //The default is 80.0
+    }
     func loadMessages()
     {
+        msgCount = 10
         self.messageList = []
         let params = ["start": "0" as AnyObject,
-                      "count": "10" as AnyObject]
+                      "count": msgCount as AnyObject]
         self.loadingView.hidden = false
         self.loadingView.startLoading()
         Net.getMessages(params).onSuccess(callback: {(message) -> Void in
@@ -44,6 +56,7 @@ class MessageViewController: UIViewController {
             if status == "ok"
             {
                 self.messageList = message.detail
+                
                 
             }else{
 //                self.showErrorAlert(message.error)
@@ -79,6 +92,57 @@ class MessageViewController: UIViewController {
             break
         }
     }
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        scrollView.loadControl?.update()
+        if checkTableViewContentHeight() && msgCount == 10
+        {
+            loadMoreData(nil)
+        }
+    }
+    
+    //load more tableView data
+    func loadMoreData(sender: AnyObject?) {
+        if msgCount > messageList.count
+        {
+            tableView.loadControl?.endLoading()
+            return
+        }
+        msgCount += 10
+        let params = ["start": "0" as AnyObject,
+                      "count": msgCount as AnyObject]
+        self.loadingView.hidden = false
+        self.loadingView.startLoading()
+        Net.getMessages(params).onSuccess(callback: {(message) -> Void in
+            let status = message.status
+            if status == "ok"
+            {
+                self.messageList = message.detail
+                
+            }else{
+                //                self.showErrorAlert(message.error)
+            }
+            self.tableView.loadControl?.endLoading()
+            self.tableView.reloadData()
+            
+            self.loadingView.completeLoading(true)
+            self.loadingView.hidden = true
+        }).onFailure(callback: { (error) -> Void in
+            self.loadingView.completeLoading(true)
+            self.tableView.loadControl?.endLoading()
+            self.loadingView.hidden = true
+            self.tableView.reloadData()
+        })
+
+    }
+    func checkTableViewContentHeight() -> Bool
+    {
+        if tableView.bounds.size.height > cellHeight * 10
+        {
+            return true
+        }
+        return false
+    }
+
 }
 // MARK: -
 // MARK: UITableView Data Source
@@ -95,6 +159,7 @@ extension MessageViewController: UITableViewDataSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(MessageCell.id, forIndexPath: indexPath) as! MessageCell
+        cellHeight = cell.bounds.size.height
         let message = messageList[indexPath.row]
         if(message.message_opened == "1")
         {
