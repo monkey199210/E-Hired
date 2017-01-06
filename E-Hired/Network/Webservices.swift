@@ -18,6 +18,7 @@ struct EHNet {
     static let  INFO_TO_MESSAGE = "go to Message"
     static let INFO_TO_CHAT = "go_to_chat"
     
+    static let AUTOKEY_URL = "http://e-hired.com/mobile.php?action=get_api_key&autodetect=1"
     static let BASE_URL = "http://e-hired.com/mobile.php?"
     static let  GET_JOBS = "action=get_jobs"
     static let  GET_APIKEY = "action=get_api_key"

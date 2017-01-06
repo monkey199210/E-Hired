@@ -108,6 +108,14 @@ class FBoxHelper{
     class func getScreenSize() -> CGSize{
         return getScreenSizeWithFix(true)
     }
+    class func checkApiKey() -> Bool{
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        let apiKey = userDefaults.objectForKey("apikey") as? String
+        if (apiKey == "" || apiKey == nil){
+            return false
+        }
+        return true
+    }
     class func getDateFromShortString(dateString: String) -> NSDate{
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "yyMMddHHmmss"
@@ -151,5 +159,6 @@ class FBoxHelper{
         let result = range != nil ? true : false
         return result
     }
+
     
 }

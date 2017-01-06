@@ -619,14 +619,14 @@
 			baseConfigurationReference = 2662354F8C2FA7774578EA4A /* Pods-E-Hired.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: E-hired (T9JPUPL894)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: E-hired (T9JPUPL894)";
 				INFOPLIST_FILE = "E-Hired/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.e-hired";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "155c54ff-10d5-4b1a-a5e0-46a7ee1aad61";
 				SWIFT_OBJC_BRIDGING_HEADER = "E-Hired/E-Hired-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -637,14 +637,14 @@
 			baseConfigurationReference = 1C29F2DACF1057E74D4F3151 /* Pods-E-Hired.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: E-hired (T9JPUPL894)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: E-hired (T9JPUPL894)";
 				INFOPLIST_FILE = "E-Hired/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.e-hired";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "155c54ff-10d5-4b1a-a5e0-46a7ee1aad61";
 				SWIFT_OBJC_BRIDGING_HEADER = "E-Hired/E-Hired-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

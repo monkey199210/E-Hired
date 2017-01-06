@@ -17,7 +17,26 @@ class ViewController: UIViewController {
         loadingView.startLoading()
         // Do any additional setup after loading the view, typically from a nib.
         GoogleAnalitics.send(GoogleAnalitics.Splash.ScreenName)
-        NSTimer.scheduledTimerWithTimeInterval(3.0, target: self, selector: #selector(ViewController.gotoMainViewController), userInfo: nil, repeats: false)
+        if FBoxHelper.checkApiKey()
+        {
+            NSTimer.scheduledTimerWithTimeInterval(3.0, target: self, selector: #selector(ViewController.gotoMainViewController), userInfo: nil, repeats: false)
+        }else{
+            Net.getAutoAPI_Key().onSuccess(callback: {(Key) -> Void in
+                let apiKey = Key.api_key
+                if apiKey != ""
+                {
+                    let userDefault = NSUserDefaults.standardUserDefaults()
+                    userDefault.setObject(apiKey, forKey: "apikey")
+                    userDefault.synchronize()
+                    
+                }else{
+                }
+                NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: #selector(ViewController.gotoMainViewController), userInfo: nil, repeats: false)
+            }).onFailure(callback: { (_) -> Void in
+                NSTimer.scheduledTimerWithTimeInterval(2.0, target: self, selector: #selector(ViewController.gotoMainViewController), userInfo: nil, repeats: false)
+            })
+        }
+        
     }
     
     override func didReceiveMemoryWarning() {

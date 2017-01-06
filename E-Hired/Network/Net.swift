@@ -74,6 +74,7 @@ class Net {
         return promise.future
     }
     
+    
     class func getJobs(date: String?) -> Future<EHJobs, NSError> {
         let promise = Promise<EHJobs, NSError>()
         var urlString = getRealUrl(EHNet.GET_JOBS)
@@ -122,6 +123,19 @@ class Net {
         let urlString = getRealUrl(EHNet.REPLY_MESSAGE)
         //        Webservice.cancelRequestForKey(kMeRequestKey)
         Webservice.request(urlString, params: params, animated: true).onSuccess { (result: WebResult<EHResult>) -> Void in
+            promise.success(result.value!)
+            }.onFailure { (error) -> Void in
+                print("Error: \(error)")
+                promise.failure(error)
+        }
+        return promise.future
+    }
+    class func getAutoAPI_Key() -> Future<EHAPIKey, NSError> {
+        let promise = Promise<EHAPIKey, NSError>()
+        let urlString = EHNet.AUTOKEY_URL
+        
+        //        Webservice.cancelRequestForKey(kMeRequestKey)
+        Webservice.getRequest(urlString, animated: true).onSuccess { (result: WebResult<EHAPIKey>) -> Void in
             promise.success(result.value!)
             }.onFailure { (error) -> Void in
                 print("Error: \(error)")

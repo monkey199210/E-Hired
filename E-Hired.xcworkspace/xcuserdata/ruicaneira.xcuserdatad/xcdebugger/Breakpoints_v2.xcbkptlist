@@ -170,12 +170,12 @@
                   moduleName = "E-Hired"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ruicaneira/Documents/Development/github/E-HiredVCS/E-Hired/ViewControllers/YourProfileViewController.swift"
-                  timestampString = "505363573.383474"
+                  timestampString = "505387872.501808"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "403"
                   endingLineNumber = "403"
-                  offsetFromSymbolStart = "19">
+                  offsetFromSymbolStart = "52">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -185,12 +185,12 @@
                   moduleName = "E-Hired"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ruicaneira/Documents/Development/github/E-HiredVCS/E-Hired/ViewControllers/YourProfileViewController.swift"
-                  timestampString = "505363573.383604"
+                  timestampString = "505387872.501932"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "403"
                   endingLineNumber = "403"
-                  offsetFromSymbolStart = "949">
+                  offsetFromSymbolStart = "904">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -352,6 +352,22 @@
             startingLineNumber = "97"
             endingLineNumber = "97"
             landmarkName = "scrollViewDidScroll(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "E-Hired/ViewControllers/ViewController.swift"
+            timestampString = "505387853.1026"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "viewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

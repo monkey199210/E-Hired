@@ -101,6 +101,7 @@ class MessageDetailViewController: UIViewController {
     @IBAction func msgReplyAction(sender: AnyObject) {
         if replyMsgTV.text == ""
         {
+            showAlertMessage("Please enter message!", title: "Warning")
             return
         }
         replyView.hidden = true
@@ -108,6 +109,7 @@ class MessageDetailViewController: UIViewController {
                       "message_body": replyMsgTV.text as AnyObject]
         
         self.loadingView.hidden = false
+        replyMsgTV.text = ""
         
         self.loadingView.startLoading()
         
@@ -116,7 +118,6 @@ class MessageDetailViewController: UIViewController {
             let status = message.status
             
             if status == "ok"
-                
             {
                 
                 print("success")
@@ -157,6 +158,14 @@ class MessageDetailViewController: UIViewController {
     {
         self.view.endEditing(true)
     }
-    
+    func showAlertMessage(message: String!, title: String!)
+    {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+        
+        let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        alertController.addAction(defaultAction)
+        
+        presentViewController(alertController, animated: true, completion: nil)
+    }
 }
 
