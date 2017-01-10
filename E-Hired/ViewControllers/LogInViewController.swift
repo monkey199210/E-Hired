@@ -61,7 +61,7 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         }).onFailure(callback: { (_) -> Void in
             self.loadingView.completeLoading(true)
             self.loadingView.hidden = true
-            self.showAlertMessage("Internet connection error!", title: "Error")
+            self.showAlertMessage("Internet connection error!", title: "Warning")
            
         })
 
@@ -70,6 +70,34 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     func handleTap()
     {
         self.view.endEditing(true)
+    }
+    @IBAction func forgotPWAction(sender: AnyObject) {
+        if self.emailTxt.text == ""
+        {
+            showAlertMessage("Please enter email address!", title: "Warning")
+            return
+        }
+        self.loadingView.hidden = false
+        self.loadingView.startLoading()
+        Net.forgotPW(emailTxt.text!).onSuccess(callback: {(result) -> Void in
+            let status = result.status
+            if status == "ok"
+            {
+                self.showAlertMessage(result.result, title: "Alert")
+                
+            }else{
+                self.showAlertMessage(result.error, title: "Alert")
+            }
+
+            self.loadingView.completeLoading(true)
+            self.loadingView.hidden = true
+        }).onFailure(callback: { (_) -> Void in
+            self.loadingView.completeLoading(true)
+            self.loadingView.hidden = true
+            self.showAlertMessage("Internet connection error!", title: "Warning")
+            
+        })
+        
     }
     func keyboardWasShown()
     {

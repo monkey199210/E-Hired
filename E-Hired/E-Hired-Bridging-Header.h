@@ -10,4 +10,5 @@
 #define E_Hired_Bridging_Header_h
 
 #import <Google/Analytics.h>
+#import "DLRadioButton.h"
 #endif /* E_Hired_Bridging_Header_h */

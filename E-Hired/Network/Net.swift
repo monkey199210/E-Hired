@@ -93,6 +93,31 @@ class Net {
         }
         return promise.future
     }
+    class func forgotPW(email: String) -> Future<EHResult, NSError> {
+        let promise = Promise<EHResult, NSError>()
+        let urlString = EHNet.FORGOT_PW + email
+        //        Webservice.cancelRequestForKey(kMeRequestKey)
+        Webservice.getRequest(urlString, animated: true).onSuccess { (result: WebResult<EHResult>) -> Void in
+            promise.success(result.value!)
+            }.onFailure { (error) -> Void in
+                print("Error: \(error)")
+                promise.failure(error)
+        }
+        return promise.future
+    }
+    class func checkNewMessage(priority: Int) -> Future<EHResult, NSError> {
+        let promise = Promise<EHResult, NSError>()
+        let urlString = getRealUrl(EHNet.CHECK_NEW_MESSAGE + String(priority))
+        //        Webservice.cancelRequestForKey(kMeRequestKey)
+        Webservice.getRequest(urlString, animated: true).onSuccess { (result: WebResult<EHResult>) -> Void in
+            promise.success(result.value!)
+            }.onFailure { (error) -> Void in
+                print("Error: \(error)")
+                promise.failure(error)
+        }
+        return promise.future
+    }
+
     class func getMessages(params: [String: AnyObject]) -> Future<EHMessage, NSError> {
         let promise = Promise<EHMessage, NSError>()
         let urlString = getRealUrl(EHNet.GET_MESSAGE)

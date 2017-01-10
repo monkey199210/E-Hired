@@ -18,14 +18,21 @@ class MainViewController: UIViewController {
     let MAP_TODAYS_JOBS_BTN = 4
     let YOUR_RESUME_BTN = 5
     let SEARCH_PREVIOUS_JOBS_BTN = 6
-    let Message_Btn = 7
+    let MESSAGE_BTN = 7
+    let SETTING_BTN = 8
     
     let JOBSOUND = 1
     let MESSAGESOUND = 2
     
+    var msgSoundMute = false
+    var jobSoundMute = false
+    
     var timer: NSTimer!
     var jobTimer: NSTimer!
     var savedate = 0
+    var delayTimer: NSTimer!
+    
+    let timerInterval: Double = 900
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -33,11 +40,11 @@ class MainViewController: UIViewController {
         self.initView()
         
         loadJobs()
-        NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: #selector(MainViewController.MessageStart), userInfo: nil, repeats: false)
+        delayTimer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: #selector(MainViewController.MessageStart), userInfo: nil, repeats: false)
         
         if jobTimer == nil
         {
-            jobTimer = NSTimer.scheduledTimerWithTimeInterval(900, target: self, selector: #selector(TodayJobsViewController.loadData), userInfo: nil, repeats: true)
+            jobTimer = NSTimer.scheduledTimerWithTimeInterval(timerInterval, target: self, selector: #selector(MainViewController.loadJobs), userInfo: nil, repeats: true)
         }
     }
     func MessageStart()
@@ -45,7 +52,7 @@ class MainViewController: UIViewController {
         loadMessages()
         if timer == nil
         {
-            timer = NSTimer.scheduledTimerWithTimeInterval(900, target: self, selector: #selector(MainViewController.loadMessages), userInfo: nil, repeats: true)
+            timer = NSTimer.scheduledTimerWithTimeInterval(timerInterval, target: self, selector: #selector(MainViewController.loadMessages), userInfo: nil, repeats: true)
         }
     }
     func initView()
@@ -54,6 +61,11 @@ class MainViewController: UIViewController {
         {
             buttons[i].layer.cornerRadius = 8
         }
+        
+        //get setting
+        let userDefault = NSUserDefaults.standardUserDefaults()
+        msgSoundMute = userDefault.boolForKey(EHNet.GET_MESSAGES_SOUND)
+        jobSoundMute = userDefault.boolForKey(EHNet.GET_JOBS_SOUND)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -67,23 +79,20 @@ class MainViewController: UIViewController {
     }
     func loadMessages()
     {
-        let params = ["start": "0" as AnyObject,
-                      "count": "10" as AnyObject]
-        Net.getMessages(params).onSuccess(callback: {(message) -> Void in
-            let status = message.status
+        let userDefault = NSUserDefaults.standardUserDefaults()
+        var sensitivity = userDefault.integerForKey(EHNet.ALERT_SENSITIVITY)
+        if sensitivity == 0
+        {
+            sensitivity = 2
+        }
+        Net.checkNewMessage(sensitivity).onSuccess(callback: {(response) -> Void in
+            let status = response.status
             if status == "ok"
             {
-                if let messageList = message.detail
+                if Int(response.result) > 0 && !self.msgSoundMute
                 {
-                    for i in 0 ..< messageList.count
-                    {
-                        if messageList[i].message_opened == "0"
-                        {
-                            self.playSound(self.MESSAGESOUND)
-                        }
-                    }
+                    self.playSound(self.MESSAGESOUND)
                 }
-                
             }else{
                 //                self.showErrorAlert(message.error)
             }
@@ -108,8 +117,11 @@ class MainViewController: UIViewController {
                 if jobs.count == 0 {
                     
                 }else{
-                    self.playSound(self.JOBSOUND)
-                    self.saveDate()
+                    if !self.jobSoundMute
+                    {
+                        self.playSound(self.JOBSOUND)
+                        self.saveDate()
+                    }
                 }
             }
         }).onFailure(callback: { (_) -> Void in
@@ -150,6 +162,7 @@ class MainViewController: UIViewController {
         }
         do {
             player = try AVAudioPlayer(contentsOfURL: url)
+            player?.volume = 1.0
             guard let player = player else { return }
             
             player.prepareToPlay()
@@ -180,8 +193,11 @@ class MainViewController: UIViewController {
         case SEARCH_PREVIOUS_JOBS_BTN:
             GoogleAnalitics.send(GoogleAnalitics.MainScreen.ScreenName, category: GoogleAnalitics.MainScreen.Category, action: GoogleAnalitics.MainScreen.Action, label: GoogleAnalitics.MainScreen.SEARCHPREVIOUSJOBSBUTTON)
             break
-        case Message_Btn:
+        case MESSAGE_BTN:
             GoogleAnalitics.send(GoogleAnalitics.MainScreen.ScreenName, category: GoogleAnalitics.MainScreen.Category, action: GoogleAnalitics.MainScreen.Action, label: GoogleAnalitics.MainScreen.MESSAGESBUTTON)
+            break
+        case SETTING_BTN:
+            GoogleAnalitics.send(GoogleAnalitics.MainScreen.ScreenName, category: GoogleAnalitics.MainScreen.Category, action: GoogleAnalitics.MainScreen.Action, label: GoogleAnalitics.MainScreen.SETTINGBUTTON)
             break
         default:
             break
@@ -193,7 +209,26 @@ class MainViewController: UIViewController {
         let userDefault = NSUserDefaults.standardUserDefaults()
         userDefault.setObject("", forKey: "apikey")
         userDefault.synchronize()
-        let mainNav = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("LogInViewController") as! LogInViewController
-        self.presentViewController(mainNav, animated: false, completion: nil)
+        if jobTimer != nil
+        {
+            jobTimer.invalidate()
+            jobTimer = nil
+        }
+        if timer != nil
+        {
+            timer.invalidate()
+            
+            timer = nil
+        }
+        if delayTimer != nil
+        {
+            delayTimer.invalidate()
+            delayTimer = nil
+        }
+//        let mainNav = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("LogInViewController") as! LogInViewController
+//        self.presentViewController(mainNav, animated: false, completion: nil)
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        appDelegate.logOut()
     }
+    
 }

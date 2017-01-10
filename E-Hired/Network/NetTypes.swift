@@ -172,9 +172,11 @@ struct EHMessage : BasicMappable {
 struct EHResult : BasicMappable {
     private(set) var status: String = ""
     private(set) var error: String = ""
+    private(set) var result: String = ""
     mutating func sequence(map: Map) throws {
         try status <~ map["status"]
         try error <~ map["error"]
+        try result <~ map["result"]
     }
 }
 struct EHAPIKey : BasicMappable {

@@ -18,8 +18,12 @@ struct EHNet {
     static let  INFO_TO_MESSAGE = "go to Message"
     static let INFO_TO_CHAT = "go_to_chat"
     
-    static let AUTOKEY_URL = "http://e-hired.com/mobile.php?action=get_api_key&autodetect=1"
+    
     static let BASE_URL = "http://e-hired.com/mobile.php?"
+    //login
+    static let  FORGOT_PW = "http://e-hired.com/mobile.php?action=send_password_reminder&email="
+    static let AUTOKEY_URL = "http://e-hired.com/mobile.php?action=get_api_key&autodetect=1"
+    //
     static let  GET_JOBS = "action=get_jobs"
     static let  GET_APIKEY = "action=get_api_key"
     static let GET_PROFILE = "action=get_profile"
@@ -34,6 +38,9 @@ struct EHNet {
     static let GET_SCHOOL_INFO_URL = "action=get_school_info"
     static let GET_MESSAGES_URL = "action=get_messages"
     static let GET_PROFILE_METADATA_URL = "action=get_profile_metadata"
+    
+    static let CHECK_NEW_MESSAGE = "action=check_new_messages&priority="
+    
     
     static let  JOBS_VIEWED_URL = "action=set_jobs_viewed"
     //update profile key
@@ -65,8 +72,10 @@ struct EHNet {
     static let JOB_VIEW_JOB_SITE_ID =  "job_site_id"
     static let JOB_LIST_KEY =  "job_list"
     
-    //Job_viewed
-    
+    //Setting keys
+    static let GET_JOBS_SOUND =  "job_sound"
+    static let GET_MESSAGES_SOUND =  "message_sound"
+    static let ALERT_SENSITIVITY =  "sensitivity"
     
 }
 class WebResult<T> {

@@ -170,12 +170,12 @@
                   moduleName = "E-Hired"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ruicaneira/Documents/Development/github/E-HiredVCS/E-Hired/ViewControllers/YourProfileViewController.swift"
-                  timestampString = "505387872.501808"
+                  timestampString = "505702226.639014"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "403"
                   endingLineNumber = "403"
-                  offsetFromSymbolStart = "52">
+                  offsetFromSymbolStart = "19">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -185,12 +185,12 @@
                   moduleName = "E-Hired"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ruicaneira/Documents/Development/github/E-HiredVCS/E-Hired/ViewControllers/YourProfileViewController.swift"
-                  timestampString = "505387872.501932"
+                  timestampString = "505702226.639287"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "403"
                   endingLineNumber = "403"
-                  offsetFromSymbolStart = "904">
+                  offsetFromSymbolStart = "949">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -282,11 +282,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "E-Hired/ViewControllers/MainViewController.swift"
-            timestampString = "505360101.972862"
+            timestampString = "505706074.138358"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "164"
-            endingLineNumber = "164"
+            startingLineNumber = "177"
+            endingLineNumber = "177"
             landmarkName = "action(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -314,27 +314,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "E-Hired/ViewControllers/MainViewController.swift"
-            timestampString = "505360101.972862"
+            timestampString = "505706074.138358"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
-            landmarkName = "loadMessages()"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "E-Hired/ViewControllers/MainViewController.swift"
-            timestampString = "505360101.972862"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "146"
-            endingLineNumber = "146"
+            startingLineNumber = "158"
+            endingLineNumber = "158"
             landmarkName = "playSound(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -367,6 +351,118 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "25"
             endingLineNumber = "25"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "E-Hired/ViewControllers/SettingViewController.swift"
+            timestampString = "505664405.323283"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "E-Hired/ViewControllers/SettingViewController.swift"
+            timestampString = "505666592.624562"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "switchChangedAction(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "E-Hired/ViewControllers/SettingViewController.swift"
+            timestampString = "505666592.624562"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "saveSetting(_:value:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "E-Hired/ViewControllers/SettingViewController.swift"
+            timestampString = "505666592.624562"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "initView()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "E-Hired/ViewControllers/MainViewController.swift"
+            timestampString = "505706074.138358"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "loadMessages()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "E-Hired/ViewControllers/MainViewController.swift"
+            timestampString = "505706074.138358"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "209"
+            endingLineNumber = "209"
+            landmarkName = "logOut()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "E-Hired/ViewControllers/LogInViewController.swift"
+            timestampString = "505702322.209895"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
             landmarkName = "viewDidLoad()"
             landmarkType = "5">
          </BreakpointContent>

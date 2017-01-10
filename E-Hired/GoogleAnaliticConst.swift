@@ -35,6 +35,7 @@ struct GoogleAnalitics {
         static let SEARCHNEWJOBSBUTTON = "Main - Search New Jobs Button"
         static let SEARCHPREVIOUSJOBSBUTTON = "Main - Search Previous Jobs Button"
         static let MESSAGESBUTTON = "Main - Messages Button"
+        static let SETTINGBUTTON = "Main - Setting Button"
         static let LOGOUTBUTTON = "Main - Logout Button"
     }
     struct MapTodayJobScreen {
@@ -142,6 +143,17 @@ struct GoogleAnalitics {
         static let MAPTODAYSJOBBUTTON = "Today - Map Today's Jobs Button"
         static let PROFILEBUTTON = "Today - Profile Button"
         static let RESUMEBUTTON = "Today - Resume Button"
+        
+    }
+    struct SettingScreen {
+        static let ScreenName = "Setting Activity"
+        //label...
+        
+        static let MAINPAGEBUTTON = "Setting - Main Button"
+        static let SEARCHBUTTON = "Setting - Search Button"
+        static let MAPTODAYSJOBBUTTON = "Setting - Map Today's Jobs Button"
+        static let PROFILEBUTTON = "Setting - Profile Button"
+        static let RESUMEBUTTON = "Setting - Resume Button"
         
     }
 

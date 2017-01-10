@@ -24,7 +24,9 @@
 		F84F74651D8F863A003BF0A9 /* SearchPreviousJobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84F74601D8F863A003BF0A9 /* SearchPreviousJobsViewController.swift */; };
 		F84F74661D8F863A003BF0A9 /* YourProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84F74611D8F863A003BF0A9 /* YourProfileViewController.swift */; };
 		F84F74671D8F863A003BF0A9 /* YourResumeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F84F74621D8F863A003BF0A9 /* YourResumeViewController.swift */; };
+		F86698F21E23BE4300E90D0E /* DLRadioButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F86698F11E23BE4300E90D0E /* DLRadioButton.m */; };
 		F873EF1C1DD0266C007510B8 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F873EF1B1DD0266C007510B8 /* LogInViewController.swift */; };
+		F87BBFC51E23B3F400CFEAB4 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87BBFC41E23B3F400CFEAB4 /* SettingViewController.swift */; };
 		F8876ED01D92122000CB2E50 /* PickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8876ECF1D92122000CB2E50 /* PickerViewController.swift */; };
 		F8887E881E02C04100F134FF /* InstagramManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8887E871E02C04100F134FF /* InstagramManager.swift */; };
 		F890A63A1E1DF8D70021B861 /* GoogleAnaliticConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = F890A6391E1DF8D70021B861 /* GoogleAnaliticConst.swift */; };
@@ -83,7 +85,10 @@
 		F84F74601D8F863A003BF0A9 /* SearchPreviousJobsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPreviousJobsViewController.swift; sourceTree = "<group>"; };
 		F84F74611D8F863A003BF0A9 /* YourProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YourProfileViewController.swift; sourceTree = "<group>"; };
 		F84F74621D8F863A003BF0A9 /* YourResumeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YourResumeViewController.swift; sourceTree = "<group>"; };
+		F86698F01E23BE4300E90D0E /* DLRadioButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLRadioButton.h; sourceTree = "<group>"; };
+		F86698F11E23BE4300E90D0E /* DLRadioButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLRadioButton.m; sourceTree = "<group>"; };
 		F873EF1B1DD0266C007510B8 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		F87BBFC41E23B3F400CFEAB4 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		F8876ECF1D92122000CB2E50 /* PickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerViewController.swift; sourceTree = "<group>"; };
 		F8887E871E02C04100F134FF /* InstagramManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InstagramManager.swift; path = Social/InstagramManager.swift; sourceTree = "<group>"; };
 		F890A6391E1DF8D70021B861 /* GoogleAnaliticConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleAnaliticConst.swift; sourceTree = "<group>"; };
@@ -209,6 +214,7 @@
 				F873EF1B1DD0266C007510B8 /* LogInViewController.swift */,
 				F890A63E1E1E6FA70021B861 /* MessageViewController.swift */,
 				F89BE8751E1ECF6800B94CDA /* MessageDetailViewController.swift */,
+				F87BBFC41E23B3F400CFEAB4 /* SettingViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -219,6 +225,15 @@
 				F84F74581D8F6F70003BF0A9 /* AvenirNextLTPro-MediumCn.otf */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		F86698EF1E23BE4300E90D0E /* DLRadioButton */ = {
+			isa = PBXGroup;
+			children = (
+				F86698F01E23BE4300E90D0E /* DLRadioButton.h */,
+				F86698F11E23BE4300E90D0E /* DLRadioButton.m */,
+			);
+			path = DLRadioButton;
 			sourceTree = "<group>";
 		};
 		F8887E861E02C02100F134FF /* Social */ = {
@@ -282,6 +297,7 @@
 		F8C662381D90B900006EA75D /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				F86698EF1E23BE4300E90D0E /* DLRadioButton */,
 				F8C662391D90B900006EA75D /* activityIndicator.swift */,
 				F80E594E1DD15182009963C2 /* RoundButton.swift */,
 			);
@@ -468,6 +484,7 @@
 				F890A63F1E1E6FA70021B861 /* MessageViewController.swift in Sources */,
 				F8C662431D90BE1A006EA75D /* Webservices.swift in Sources */,
 				F8B139F71D91B3F8001B4ACD /* ImageRequestKey.swift in Sources */,
+				F87BBFC51E23B3F400CFEAB4 /* SettingViewController.swift in Sources */,
 				F8B139F81D91B3F8001B4ACD /* ImageResponse.swift in Sources */,
 				F873EF1C1DD0266C007510B8 /* LogInViewController.swift in Sources */,
 				F8B139F51D91B3F8001B4ACD /* ImageProcessor.swift in Sources */,
@@ -485,6 +502,7 @@
 				F84F745B1D8F7F8A003BF0A9 /* MainViewController.swift in Sources */,
 				F84F74641D8F863A003BF0A9 /* SearchNewJobsViewController.swift in Sources */,
 				F84F74631D8F863A003BF0A9 /* MapTodaysJobsViewController.swift in Sources */,
+				F86698F21E23BE4300E90D0E /* DLRadioButton.m in Sources */,
 				F8876ED01D92122000CB2E50 /* PickerViewController.swift in Sources */,
 				F89BE8761E1ECF6800B94CDA /* MessageDetailViewController.swift in Sources */,
 				F8C662421D90BE1A006EA75D /* NetTypes.swift in Sources */,

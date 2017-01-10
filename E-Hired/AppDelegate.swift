@@ -30,6 +30,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         gai.logger.logLevel = GAILogLevel.Error  // remove before app release
         return true
     }
+    func logOut()
+    {
+        let mainNav = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("LogInViewController") as! LogInViewController
+        
+        if let window = self.window{
+            window.rootViewController = mainNav
+        }
+    }
 
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
