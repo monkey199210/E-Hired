@@ -2447,6 +2447,7 @@ Page</string>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="RRp-ow-CPP"/>
                                                 </constraints>
+                                                <color key="textColor" red="0.29411764709999999" green="0.52941176469999995" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
@@ -2455,6 +2456,7 @@ Page</string>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0nc-l9-JOb">
                                                 <rect key="frame" x="41" y="240" width="295" height="40"/>
+                                                <color key="textColor" red="0.29411764709999999" green="0.52941176469999995" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                 <connections>

@@ -21,6 +21,17 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         let tapGesture = UITapGestureRecognizer.init(target: self, action: #selector(LogInViewController.handleTap))
         self.scrollView.addGestureRecognizer(tapGesture);
         logInBtn.layer.cornerRadius = 8
+        
+        //draw border line in textView
+        emailTxt.layer.borderColor = logInBtn.backgroundColor?.CGColor
+        emailTxt.layer.borderWidth = 2
+        emailTxt.layer.cornerRadius = 8
+        
+        pwdText.layer.borderColor = logInBtn.backgroundColor?.CGColor
+        pwdText.layer.borderWidth = 2
+        pwdText.layer.cornerRadius = 8
+        
+        
     }
     override func viewDidAppear(animated: Bool) {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(keyboardWasShown), name: UIKeyboardWillShowNotification, object: nil)
