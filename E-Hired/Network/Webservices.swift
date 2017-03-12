@@ -363,18 +363,3 @@ class Webservice {
     }
 
 }
-//extension String {
-//    static func FBURL(urlString: String) -> String {
-//        let localeCode = getLocaleCode();
-//        var urlDomain = "com";
-//        if(localeCode == "de" || localeCode == "es"){
-//            urlDomain = localeCode;
-//        }
-//        let url = (NSString(format: FBNet.API_BASE_URL, urlDomain) as String)  + urlString;
-//        return url;
-//    }
-//    static func getLocaleCode()->String{
-//        let locale = NSLocale.preferredLanguages()[0] as String;
-//        return locale.substringToIndex(locale.startIndex.advancedBy(2));
-//    }
-//}

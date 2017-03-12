@@ -51,6 +51,7 @@
 		F8B139F91D91B3F8001B4ACD /* ImageTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B139E91D91B3F8001B4ACD /* ImageTask.swift */; };
 		F8B139FA1D91B3F8001B4ACD /* Internal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B139EA1D91B3F8001B4ACD /* Internal.swift */; };
 		F8B139FB1D91B3F8001B4ACD /* Nuke.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B139EB1D91B3F8001B4ACD /* Nuke.swift */; };
+		F8C0DB631E26BB820050E3AA /* E-Hired.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = F8C0DB621E26BB820050E3AA /* E-Hired.entitlements */; };
 		F8C6623A1D90B900006EA75D /* activityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C662391D90B900006EA75D /* activityIndicator.swift */; };
 		F8C662401D90BE1A006EA75D /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C6623C1D90BE1A006EA75D /* ImageUploader.swift */; };
 		F8C662411D90BE1A006EA75D /* Net.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C6623D1D90BE1A006EA75D /* Net.swift */; };
@@ -114,6 +115,7 @@
 		F8B139E91D91B3F8001B4ACD /* ImageTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTask.swift; sourceTree = "<group>"; };
 		F8B139EA1D91B3F8001B4ACD /* Internal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Internal.swift; sourceTree = "<group>"; };
 		F8B139EB1D91B3F8001B4ACD /* Nuke.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Nuke.swift; sourceTree = "<group>"; };
+		F8C0DB621E26BB820050E3AA /* E-Hired.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "E-Hired.entitlements"; sourceTree = "<group>"; };
 		F8C662391D90B900006EA75D /* activityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = activityIndicator.swift; sourceTree = "<group>"; };
 		F8C6623C1D90BE1A006EA75D /* ImageUploader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 		F8C6623D1D90BE1A006EA75D /* Net.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Net.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 		F84F74411D8F65D6003BF0A9 /* E-Hired */ = {
 			isa = PBXGroup;
 			children = (
+				F8C0DB621E26BB820050E3AA /* E-Hired.entitlements */,
 				F84F74491D8F65D7003BF0A9 /* Assets.xcassets */,
 				F8887E861E02C02100F134FF /* Social */,
 				F8C6623B1D90BD7A006EA75D /* Network */,
@@ -385,6 +388,11 @@
 					F84F743E1D8F65D6003BF0A9 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = T9JPUPL894;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -415,6 +423,7 @@
 				F890A63D1E1DFF570021B861 /* GoogleService-Info.plist in Resources */,
 				F89B31C61E0303FE0038695A /* job.mp3 in Resources */,
 				F8C662501D90E2DD006EA75D /* JobCell.xib in Resources */,
+				F8C0DB631E26BB820050E3AA /* E-Hired.entitlements in Resources */,
 				F84B78561E1F2114002D3D2C /* message.mp3 in Resources */,
 				F890A6461E1E8FB40021B861 /* MessageCell.xib in Resources */,
 				F84F744D1D8F65D7003BF0A9 /* LaunchScreen.storyboard in Resources */,
@@ -637,14 +646,14 @@
 			baseConfigurationReference = 2662354F8C2FA7774578EA4A /* Pods-E-Hired.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: E-hired (T9JPUPL894)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: E-hired (T9JPUPL894)";
 				INFOPLIST_FILE = "E-Hired/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.e-hired";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "155c54ff-10d5-4b1a-a5e0-46a7ee1aad61";
 				SWIFT_OBJC_BRIDGING_HEADER = "E-Hired/E-Hired-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -655,14 +664,14 @@
 			baseConfigurationReference = 1C29F2DACF1057E74D4F3151 /* Pods-E-Hired.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: E-hired (T9JPUPL894)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: E-hired (T9JPUPL894)";
 				INFOPLIST_FILE = "E-Hired/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.e-hired";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "155c54ff-10d5-4b1a-a5e0-46a7ee1aad61";
 				SWIFT_OBJC_BRIDGING_HEADER = "E-Hired/E-Hired-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
